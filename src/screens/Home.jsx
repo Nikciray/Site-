@@ -13,7 +13,7 @@ export const Home = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch("http://217.114.3.46:8000/api/main/room-types", {
+        const response = await fetch("http://212.8.226.103:8000/api/main/room-types", {
           headers: { accept: "application/json" },
         });
         if (!response.ok) throw new Error("Ошибка загрузки данных");

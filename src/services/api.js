@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://217.114.3.46:8000/api';
+const API_BASE_URL = 'http://212.8.226.103:8000/api';
 
 export const catalogAPI = {
   async getRoomTypes(params = {}) {

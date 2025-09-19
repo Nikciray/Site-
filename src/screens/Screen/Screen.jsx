@@ -47,8 +47,8 @@ export const Screen = () => {
     setLoading(true);
     setError(null);
     Promise.all([
-      fetch(`http://217.114.3.46:8000/api/info/room-types/${id}`).then(r => r.json()),
-      fetch(`http://217.114.3.46:8000/api/similar/room-types/${id}`).then(r => r.json()),
+      fetch(`http://212.8.226.103:8000/api/info/room-types/${id}`).then(r => r.json()),
+      fetch(`http://212.8.226.103:8000/api/similar/room-types/${id}`).then(r => r.json()),
     ])
       .then(([apartmentData, similarData]) => {
         setApartment(apartmentData);

@@ -5,7 +5,7 @@ React приложение для просмотра каталога недви
 
 ## Backend Integration
 
-Приложение интегрировано с backend API по адресу `http://217.114.3.46:8000/api`.
+Приложение интегрировано с backend API по адресу `http://212.8.226.103:8000/api`.
 
 ### API Endpoints
 
@@ -25,7 +25,7 @@ React приложение для просмотра каталога недви
 
 ```bash
 curl -X 'GET' \
-  'http://217.114.3.46:8000/api/catalog/room-types?price_from=1000&price_to=3000&size_from=30&size_to=50&category=%D0%9D%D0%BE%D0%BC%D0%B5%D1%80&adult_bed=3&sort_by=size' \
+  'http://212.8.226.103:8000/api/catalog/room-types?price_from=1000&price_to=3000&size_from=30&size_to=50&category=%D0%9D%D0%BE%D0%BC%D0%B5%D1%80&adult_bed=3&sort_by=size' \
   -H 'accept: application/json'
 ```
 
