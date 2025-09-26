@@ -101,17 +101,22 @@ export const PropertyListSection = () => {
               </p>
             </div>
             <div className="flex w-full justify-end pr-0 mb-[32px]">
-              <button
-                className="h-[44px] bg-[#106cec] rounded-full hover:bg-[#0d5bc7] focus:bg-[#0d5bc7] focus:outline-none focus:ring-2 focus:ring-[#106cec] focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-[20px] font-bold text-white px-8 min-w-[180px]"
-                onClick={handleBookingClick}
-                disabled={isBooking}
-                aria-label="Book this property"
-              >
-                {isBooking ? "Бронируется..." : "Забронировать"}
-              </button>
+              {/*<button*/}
+              {/*    className="h-[44px] bg-[#106cec] rounded-full hover:bg-[#0d5bc7] focus:bg-[#0d5bc7] focus:outline-none focus:ring-2 focus:ring-[#106cec] focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-[20px] font-bold text-white px-8 min-w-[180px]"*/}
+              {/*    onClick={handleBookingClick}*/}
+              {/*    disabled={isBooking}*/}
+              {/*    aria-label="Book this property"*/}
+              {/*>*/}
+              {/*  {isBooking ? "Бронируется..." : "Забронировать"}*/}
+              {/*</button>*/}
+              <a href="/booking"
+                 className="h-[44px] bg-[#106cec] rounded-full hover:bg-[#0d5bc7] focus:bg-[#0d5bc7] focus:outline-none focus:ring-2 focus:ring-[#106cec] focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-[20px] font-bold text-white px-8 min-w-[180px]"
+                 style={{textAlign: 'center', alignItems: 'center', display: 'flex'}}>
+                Забронировать
+              </a>
             </div>
           </div>
-        </article>
+          </article>
         </Link>
       ))}
     </section>

@@ -8,6 +8,7 @@ import {
 import { CatalogProvider } from "../context/CatalogContext";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import TravelLineSearchForm from "../components/TLSearchForm.jsx";
 
 export const Catalog = () => {
   return (
@@ -27,6 +28,7 @@ const CatalogContent = () => {
       <div className="w-full max-w-[1440px] px-4 md:px-8 mt-8 flex flex-col">
         {/* Заголовок */}
         <h1 className="text-4xl md:text-5xl font-semibold text-[#2d2d2d] mb-8 text-left md:text-left">Каталог</h1>
+          <TravelLineSearchForm id={'inner'} />
         <div className="flex flex-col md:flex-row gap-8">
           {/* Фильтр слева */}
           <div className="w-full md:min-w-[300px] md:max-w-[350px] md:w-auto mb-8 md:mb-0">
