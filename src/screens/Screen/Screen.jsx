@@ -3,6 +3,7 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import TravelLineSearchForm from "../../components/TLSearchForm.jsx";
 
 export const Screen = () => {
   const { id } = useParams();
@@ -205,6 +206,7 @@ export const Screen = () => {
     <div className="bg-white min-h-screen w-full flex flex-col items-center pt-20">
       <Header />
       {/* Main content container */}
+      <TravelLineSearchForm id={'detail'} />
       <div className="w-full max-w-[1440px] px-4 md:px-8 mt-8 flex flex-col gap-8">
         {/* Main section: images + details */}
         <div className="flex flex-col lg:flex-row justify-center" style={{gap: '20px'}}>
@@ -309,22 +311,25 @@ export const Screen = () => {
                 <div className="font-medium text-xl text-black">За 2 суток</div>
                 <div className="font-medium text-xl text-black text-right">{apartment.price * 2} <span className="text-base font-normal">₽</span></div>
               </div>
-              <div className="w-full">
-                <label className="block text-sm text-[#4a4a4a] mb-1">Ваш телефон для бронирования</label>
-                <input
-                  type="tel"
-                  value={phoneNumber}
-                  onChange={e => setPhoneNumber(e.target.value)}
-                  className="w-full px-2 py-1 bg-[#eeeeee] rounded-lg text-sm text-black outline-none"
-                  placeholder="+7"
-                />
-              </div>
-              <button
-                onClick={() => {}}
-                className="w-full bg-[#106cec] rounded-full py-2 hover:bg-[#0d5bc7] transition-colors text-white text-xl font-medium"
-              >
+              {/*<div className="w-full">*/}
+              {/*  <label className="block text-sm text-[#4a4a4a] mb-1">Ваш телефон для бронирования</label>*/}
+              {/*  <input*/}
+              {/*    type="tel"*/}
+              {/*    value={phoneNumber}*/}
+              {/*    onChange={e => setPhoneNumber(e.target.value)}*/}
+              {/*    className="w-full px-2 py-1 bg-[#eeeeee] rounded-lg text-sm text-black outline-none"*/}
+              {/*    placeholder="+7"*/}
+              {/*  />*/}
+              {/*</div>*/}
+              {/*<button*/}
+              {/*  onClick={() => {}}*/}
+              {/*  className="w-full bg-[#106cec] rounded-full py-2 hover:bg-[#0d5bc7] transition-colors text-white text-xl font-medium"*/}
+              {/*>*/}
+              {/*  Забронировать*/}
+              {/*</button>*/}
+              <a href="/booking" className="w-full bg-[#106cec] rounded-full py-2 hover:bg-[#0d5bc7] transition-colors text-white text-xl font-medium" style={{ textAlign: 'center' }}>
                 Забронировать
-              </button>
+              </a>
             </div>
           </div>
         </div>

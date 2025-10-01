@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import TravelLineSearchForm from '../components/TLSearchForm';
 
 export const Home = () => {
   const [apartments, setApartments] = useState([]);
@@ -436,7 +437,8 @@ export const Home = () => {
               </div>
             </div>
             {/* Search form */}
-            <div className="flex items-center justify-center w-full" style={{ marginTop: '14px', marginBottom: '14px' }}>
+            <TravelLineSearchForm id={'main'} />
+            {/*<div className="flex items-center justify-center w-full" style={{ marginTop: '14px', marginBottom: '14px' }}>
               <div
                 className="flex flex-row items-center justify-center gap-4"
                 style={{
@@ -480,11 +482,12 @@ export const Home = () => {
                   Найти
                 </button>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
       </section>
 
+      <TravelLineSearchForm id={'mobile'} />
       {/* Apartments cards */}
       <section className="w-full max-w-7xl mx-auto z-30 mt-12 pb-8 px-4">
         {loading ? (
