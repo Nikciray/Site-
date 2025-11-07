@@ -6,7 +6,4 @@ export default {
   extends: [vikeReact, vikePhoton],
   ssr: false,
   reactStrictMode: false,
-  photon: {
-    server: 'server/index.ts'
-  }
 } satisfies Config;
