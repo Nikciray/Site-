@@ -9,7 +9,6 @@
 		"start": "NODE_ENV=production node ./dist/server/index.mjs"
 	},
 	"dependencies": {
-		"@photonjs/hono": "0.1.4",
 		"@photonjs/vercel": "^0.1.5",
 		"@radix-ui/react-dialog": "1.1.15",
 		"@reatom/async": "3.16.10",
@@ -17,7 +16,6 @@
 		"@reatom/npm-react": "3.10.6",
 		"class-variance-authority": "0.7.1",
 		"clsx": "2.1.1",
-		"hono": "4.10.4",
 		"lucide-react": "0.546.0",
 		"motion": "12.23.24",
 		"react": "19.2.0",

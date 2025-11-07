@@ -30,7 +30,7 @@ const Tab = reatomComponent<TabProps>(({ text, value, ctx }) => {
         <motion.span
           layoutId="tabs"
           transition={{ type: "spring", duration: 0.5 }}
-          className="absolute inset-0 rounded-2xl bg-black/20"
+          className="absolute inset-0 rounded-2xl bg-black/10"
         />
       )}
     </a>

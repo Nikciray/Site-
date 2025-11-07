@@ -6,4 +6,5 @@ export default {
   extends: [vikeReact, vikePhoton],
   ssr: false,
   reactStrictMode: false,
+  port: 3004
 } satisfies Config;

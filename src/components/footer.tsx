@@ -1,11 +1,11 @@
 export const Footer = () => {
   return (
-    <footer id="footer" className="w-full flex justify-center py-12 px-6">
+    <footer id="footer" className="flex w-full justify-center py-12 px-6">
       <div
-        className="w-full max-w-full bg-white flex flex-col justify-center rounded-3xl min-h-[350px] border-2 border-solid border-[#E5E7EB] items-center"
+        className="flex flex-col justify-center w-full max-w-full bg-white rounded-3xl min-h-[350px] border-2 border-solid border-[#E5E7EB] items-center"
       >
         <nav className="w-full max-w-5xl" role="navigation" aria-label="Footer navigation">
-          <div className="grid grid-cols-4 w-full">
+          <div className="grid grid-cols-2 auto-rows-auto gap-4 sm:grid-cols-4 w-full">
             <div className="flex flex-col items-center">
               <div className="font-normal text-[#4a4a4a] text-base text-center">Контакты</div>
               <ul className="flex flex-col items-start gap-2 mt-2">
@@ -31,7 +31,9 @@ export const Footer = () => {
               </a>
             </div>
             <div className="flex flex-col items-center justify-start">
-              <div className="font-normal text-[#4a4a4a] text-base text-center">О нас</div>
+              <a href="/#about" className="font-normal text-[#4a4a4a] text-base text-center">
+                О нас
+              </a>
             </div>
           </div>
         </nav>

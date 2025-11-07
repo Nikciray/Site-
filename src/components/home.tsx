@@ -297,23 +297,23 @@ export const Reviews = () => {
 export const Contacts = () => {
   return (
     <section id="contacts" className="w-full max-w-7xl mx-auto z-30 mt-12 pb-8">
-      <div className="flex flex-col sm:flex-row items-center gap-4 w-full h-full">
+      <div className="flex flex-col sm:flex-row items-stretch gap-4 w-full h-full">
         <div className="flex flex-col gap-2 w-full sm:w-2/3 *:rounded-3xl">
           <div className="flex flex-col justify-between sm:h-[309px] p-4 sm:p-6 md:p-8 lg:p-10 w-full border border-black/20">
-            <p className="text-[#106CEC] uppercase text-xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold">
+            <p className="text-brand uppercase text-xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold">
               Добрые сутки
             </p>
             <p className="text-xl md:text-3xl lg:text-4xl uppercase font-semibold">
               Квартиры <br/>где хочется остаться
             </p>
           </div>
-          <div className="flex items-center justify-start p-4 sm:p-6 md:p-8 lg:p-16 bg-gradient-to-tr from-[#106CEC] to-[#106CEC]/50 sm:h-[196px] w-full">
+          <div className="flex items-center justify-start p-4 sm:p-6 md:p-8 lg:p-16 bg-gradient-to-tr from-brand to-brand/50 sm:h-[196px] w-full">
             <p className="text-white uppercase font-semibold text-md sm:text-2xl">
               “ Уют — это не стены, а отношение. Мы вкладываем душу в каждую квартиру, чтобы вы могли просто жить и отдыхать ”
             </p>
           </div>
         </div>
-        <div className="flex w-full sm:w-1/3 border h-full rounded-3xl border-black/20">
+        <div className="flex flex-1 w-full sm:w-1/3 overflow-hidden rounded-3xl bg-gradient-to-br from-transparent via-brand/5 to-brand">
           <img src="/images/preview.png" alt="" className="object-cover w-full h-full" />
         </div>
       </div>
@@ -334,25 +334,29 @@ export const Hero = () => {
         }}
       >
         <img
-          src="https://c.animaapp.com/x7ciH6IU/img/b6f24610-bf13-11ef-936a-dacda727d281-1220x600-1.png"
+          src="/images/ekb-hero.png"
           alt="Фон города Екатеринбурга"
+          fetchPriority="high"
+          loading="eager"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pt-16 pb-8">
           <div className="flex items-center justify-center glass-card px-4 sm:px-6 py-2 sm:h-[90px] rounded-full">
             <h1
-              className="font-extrabold relative -top-1 text-white text-nowrap text-lg min-[350px]:text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-[56px] text-center"
+              className="font-extrabold relative -top-1 text-white text-nowrap 
+                text-lg min-[350px]:text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-[56px] text-center"
               style={{ textShadow: '0 4px 24px rgba(0,0,0,0.35)' }}
             >
               Квартиры в Екатеринбурге
             </h1>
           </div>
           <div
-            className="relative -top-2 inline-flex items-center justify-center px-6 sm:px-12 py-2 sm:h-[70px] bg-[#1677ff] rounded-full mb-4 shadow-lg"
+            className="relative -top-2 inline-flex items-center justify-center px-6 sm:px-12 py-2 sm:h-[70px] bg-brand rounded-full mb-4 shadow-lg"
             style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.18)' }}
           >
             <div
-              className="font-extrabold relative -top-1 text-white text-nowrap text-lg min-[350px]:text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-[56px] text-center"
+              className="font-extrabold relative -top-1 text-white text-nowrap 
+                text-lg min-[350px]:text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-[56px] text-center"
             >
               Посуточно
             </div>

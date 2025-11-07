@@ -11,14 +11,6 @@ export default defineConfig(({ mode }) => ({
     tailwindcss(),
     tsconfigPaths()
   ],
-  publicDir: "./static",
-  dev: {
-    sourcemap: true
-  },
-  build: {
-    sourcemap: true,
-    minify: true
-  },
   server: {
     port: 3004
   },
