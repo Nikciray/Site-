@@ -7,11 +7,21 @@
       "_chunk-Db1vM16j.js"
     ]
   },
-  "_chunk-C5TWPvR2.js": {
-    "file": "assets/chunks/chunk-C5TWPvR2.js",
+  "_chunk-BmT8dS_I.js": {
+    "file": "assets/chunks/chunk-BmT8dS_I.js",
     "name": "index",
     "imports": [
-      "_chunk-M7f6xKhD.js"
+      "_chunk-CVos-TWr.js"
+    ]
+  },
+  "_chunk-CVos-TWr.js": {
+    "file": "assets/chunks/chunk-CVos-TWr.js",
+    "name": "Loading",
+    "imports": [
+      "_chunk-riqJSy5I.js"
+    ],
+    "css": [
+      "assets/static/src_styles_global-00f5cfaf.Cghe_m1I.css"
     ]
   },
   "_chunk-Db1vM16j.js": {
@@ -21,26 +31,16 @@
       "_chunk-riqJSy5I.js"
     ]
   },
-  "_chunk-M7f6xKhD.js": {
-    "file": "assets/chunks/chunk-M7f6xKhD.js",
-    "name": "Loading",
-    "imports": [
-      "_chunk-riqJSy5I.js"
-    ],
-    "css": [
-      "assets/static/src_styles_global-00f5cfaf.DKMSCPqa.css"
-    ]
-  },
   "_chunk-riqJSy5I.js": {
     "file": "assets/chunks/chunk-riqJSy5I.js",
     "name": "execHook"
   },
-  "_src_styles_global-00f5cfaf.DKMSCPqa.css": {
-    "file": "assets/static/src_styles_global-00f5cfaf.DKMSCPqa.css",
-    "src": "_src_styles_global-00f5cfaf.DKMSCPqa.css"
+  "_src_styles_global-00f5cfaf.Cghe_m1I.css": {
+    "file": "assets/static/src_styles_global-00f5cfaf.Cghe_m1I.css",
+    "src": "_src_styles_global-00f5cfaf.Cghe_m1I.css"
   },
   "node_modules/vike/dist/esm/client/runtime-client-routing/entry.js": {
-    "file": "assets/entries/entry-client-routing.F3vxs1Pt.js",
+    "file": "assets/entries/entry-client-routing.CxNkoFZi.js",
     "name": "entries/entry-client-routing",
     "src": "node_modules/vike/dist/esm/client/runtime-client-routing/entry.js",
     "isEntry": true,
@@ -56,65 +56,65 @@
     ]
   },
   "virtual:vike:page-entry:client:/src/pages/_error": {
-    "file": "assets/entries/src_pages_error.D9BMxWDT.js",
+    "file": "assets/entries/src_pages_error.C-LjersA.js",
     "name": "entries/src/pages/_error",
     "src": "virtual:vike:page-entry:client:/src/pages/_error",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chunk-M7f6xKhD.js",
+      "_chunk-CVos-TWr.js",
       "_chunk-B2FnCi9K.js",
       "_chunk-Db1vM16j.js",
       "_chunk-riqJSy5I.js"
     ],
     "css": [
-      "assets/static/src_styles_global-00f5cfaf.DKMSCPqa.css"
+      "assets/static/src_styles_global-00f5cfaf.Cghe_m1I.css"
     ]
   },
   "virtual:vike:page-entry:client:/src/pages/apartment/@id": {
-    "file": "assets/entries/src_pages_apartment_-id.ChR_tUo7.js",
+    "file": "assets/entries/src_pages_apartment_-id.Dney7H6b.js",
     "name": "entries/src/pages/apartment/@id",
     "src": "virtual:vike:page-entry:client:/src/pages/apartment/@id",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chunk-M7f6xKhD.js",
-      "_chunk-C5TWPvR2.js",
+      "_chunk-CVos-TWr.js",
+      "_chunk-BmT8dS_I.js",
       "_chunk-B2FnCi9K.js",
       "_chunk-Db1vM16j.js",
       "_chunk-riqJSy5I.js"
     ],
     "css": [
-      "assets/static/src_styles_global-00f5cfaf.DKMSCPqa.css"
+      "assets/static/src_styles_global-00f5cfaf.Cghe_m1I.css"
     ]
   },
   "virtual:vike:page-entry:client:/src/pages/booking": {
-    "file": "assets/entries/src_pages_booking.DLXpGrU1.js",
+    "file": "assets/entries/src_pages_booking.Cou8_9jO.js",
     "name": "entries/src/pages/booking",
     "src": "virtual:vike:page-entry:client:/src/pages/booking",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chunk-M7f6xKhD.js",
+      "_chunk-CVos-TWr.js",
       "_chunk-riqJSy5I.js"
     ],
     "css": [
-      "assets/static/src_styles_global-00f5cfaf.DKMSCPqa.css"
+      "assets/static/src_styles_global-00f5cfaf.Cghe_m1I.css"
     ]
   },
   "virtual:vike:page-entry:client:/src/pages/index": {
-    "file": "assets/entries/src_pages_index.BSTtxjps.js",
+    "file": "assets/entries/src_pages_index.CUXfasKg.js",
     "name": "entries/src/pages/index",
     "src": "virtual:vike:page-entry:client:/src/pages/index",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chunk-M7f6xKhD.js",
-      "_chunk-C5TWPvR2.js",
+      "_chunk-CVos-TWr.js",
+      "_chunk-BmT8dS_I.js",
       "_chunk-riqJSy5I.js"
     ],
     "css": [
-      "assets/static/src_styles_global-00f5cfaf.DKMSCPqa.css"
+      "assets/static/src_styles_global-00f5cfaf.Cghe_m1I.css"
     ]
   }
 }
