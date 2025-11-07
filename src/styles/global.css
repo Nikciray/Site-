@@ -1,0 +1,211 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@font-face {
+  font-family: "SF UI Display-Semibold";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/60f3c4503fb8eff1db184ea1/fonts/sfuidisplay-semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF UI Display-Medium";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/60f4b3fef85b36a0e63035f7/fonts/sfuidisplay-medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF UI Display-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/projects/5ff6ede6235e9b317da108ed/fonts/sf-ui-display-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham Pro-Regular";
+  src: url("https://anima-uploads.s3.amazonaws.com/5dea74889032e139b9ccf675/Gotham Pro Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Gotham Pro-Medium";
+  src: url("https://anima-uploads.s3.amazonaws.com/5b9f7ad0d7acb600098ebdae/GothaProMed.otf") format("opentype");
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+@layer base {
+
+  button,
+  input,
+  select,
+  textarea {
+    @apply appearance-none bg-transparent border-0 outline-none;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+
+  /* Mobile-first responsive utilities */
+  .container-responsive {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
+  }
+
+  .heading-responsive {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+  }
+
+  .spacing-responsive {
+    @apply p-4 sm:p-6 md:p-8 lg:p-12 xl:p-16;
+  }
+
+  /* Wide screen optimizations */
+  @media (min-width: 1920px) {
+    .wide-screen-container {
+      @apply max-w-3xl mx-auto;
+    }
+  }
+
+  @media (min-width: 2560px) {
+    .ultra-wide-container {
+      @apply max-w-4xl mx-auto;
+    }
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .mobile-optimized {
+      @apply text-sm leading-relaxed;
+    }
+  }
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Скрытие всех фиксированных элементов внизу экрана, которые могут быть баннерами */
+div[style*="position: fixed"]:has(img[alt*="человек"]),
+div[style*="position: fixed"]:has(span:contains("просматривают")),
+div[style*="position: fixed"]:has(span:contains("человек")) {
+  display: none !important;
+}
+
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Touch optimizations */
+@media (hover: none) and (pointer: coarse) {
+
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+#tl-booking-form {
+  width: 100%;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+/* Скрытие баннера TravelLine "2 человека сейчас просматривают эту страницу" */
+[class*="viewing"],
+[class*="viewer"],
+[class*="people"],
+[class*="currently"],
+[class*="просматривают"],
+[class*="человек"],
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position: fixed"][style*="left"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.tl-viewing-banner,
+.tl-social-proof,
+.tl-notification,
+[data-tl="viewing"],
+[data-tl="notification"] {
+  display: none !important;
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(21px);
+    -webkit-backdrop-filter: blur(21px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 0 4px 2px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent);
+  }
+
+  .glass-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.8),
+        transparent,
+        rgba(255, 255, 255, 0.3));
+  }
+}
