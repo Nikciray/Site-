@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "../ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 import { Menu } from "lucide-react";
 import { atom } from "@reatom/core";
 import { reatomComponent } from "@reatom/npm-react";
@@ -8,13 +14,13 @@ import { pageContextAtom } from "@/lib/global.model";
 
 interface TabProps {
   text: string;
-  value: string
+  value: string;
 }
 
 const Tab = reatomComponent<TabProps>(({ text, value, ctx }) => {
   const pathname = ctx.spy(pathnameAtom);
 
-  const isSelected = pathname === value
+  const isSelected = pathname === value;
 
   return (
     <a
@@ -35,34 +41,30 @@ const Tab = reatomComponent<TabProps>(({ text, value, ctx }) => {
       )}
     </a>
   );
-}, "Tab")
+}, "Tab");
 
 const TABS = [
   { title: "Каталог квартир", value: "/booking" },
   { title: "Отзывы", value: "/#reviews-section" },
   { title: "О нас", value: "/#about" },
-]
+];
 
 pageContextAtom.onChange((ctx, state) => {
   if (!state) return;
-  pathnameAtom(ctx, state.urlParsed.pathname)
-})
+  pathnameAtom(ctx, state.urlParsed.pathname);
+});
 
-const pathnameAtom = atom("/")
+const pathnameAtom = atom("/");
 
 const NavTabs = reatomComponent<{ tabs: typeof TABS }>(({ tabs, ctx }) => {
   return (
     <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-9">
       {tabs.map((tab) => (
-        <Tab
-          value={tab.value}
-          text={tab.title}
-          key={tab.value}
-        />
+        <Tab value={tab.value} text={tab.title} key={tab.value} />
       ))}
     </div>
   );
-})
+});
 
 export const Header = () => {
   return (
@@ -71,13 +73,18 @@ export const Header = () => {
     -translate-x-1/2 w-[calc(100%-40px)] max-w-[1270px] h-[47px]
     flex items-center justify-center
     bg-white/80 backdrop-blur rounded-full transition-all"
-      style={{ boxShadow: '0 6px 32px 0 rgba(0,0,0,0.10)' }}
+      style={{ boxShadow: "0 6px 32px 0 rgba(0,0,0,0.10)" }}
     >
       <nav className="w-full gap-3 flex items-center justify-between px-[18px] h-full">
-        <a
-          href="/"
-          className="w-8 h-8 bg-[#e0e0e0] rounded-full mr-4 flex-shrink-0"
-        />
+        <a href="/" className="w-8 h-8 bg-[#e0e0e0] rounded-full mr-4 shrink-0">
+          <img
+            src="/favicon.svg"
+            alt=""
+            fetchPriority="high"
+            draggable={false}
+            className="w-full h-full object-cover"
+          />
+        </a>
         <div className="flex items-center justify-center gap-16 flex-1 min-w-0">
           <div className="hidden md:block">
             <NavTabs tabs={TABS} />
@@ -85,7 +92,7 @@ export const Header = () => {
           <div className="flex w-full justify-end items-center md:hidden h-full">
             <Sheet>
               <SheetTrigger
-                className="flex hover:bg-[#106cec] hover:text-white items-center justify-center h-[31px] aspect-square w-[31px] rounded-2xl 
+                className="flex hover:bg-[#106cec] hover:text-white items-center justify-center h-[31px] aspect-square w-[31px] rounded-2xl
               border cursor-pointer border-[#222]"
               >
                 <Menu size={16} />
@@ -96,25 +103,22 @@ export const Header = () => {
                 </SheetHeader>
                 <div className="flex flex-col items-center justify-center gap-2 w-full h-full">
                   {TABS.map((tab) => (
-                    <Tab
-                      value={tab.value}
-                      text={tab.title}
-                      key={tab.value}
-                    />
+                    <Tab value={tab.value} text={tab.title} key={tab.value} />
                   ))}
                 </div>
               </SheetContent>
             </Sheet>
           </div>
         </div>
-        <button
-          className="inline-flex cursor-pointer items-center justify-center border border-[#222] rounded-[16px] 
+        <a
+          href="https://guest.travelline.ru/guest-account/19208/booking/login"
+          className="inline-flex cursor-pointer items-center justify-center border border-[#222] rounded-2xl
             h-[31px] w-[83px] px-0 font-medium text-[#222] text-[16px] leading-none
             transition-colors duration-200 bg-transparent focus:outline-none hover:bg-[#106cec] hover:text-white hover:border-transparent"
         >
           Войти
-        </button>
+        </a>
       </nav>
     </header>
   );
-}
+};
